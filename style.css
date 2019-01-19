@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: yellow;
+}
+
+.table {
+    display: table;
+}
+.row {
+    display: table-row;
+}
+.block {
+    width: 50%;
+    background: red;
+    border: 1px solid var(--primary);
+    display: table-cell;
+}
+
+
+.flex {
+    display: flex;
+    /* row is default */
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+
+    /* flex-wrap: wrap; */
+    flex-flow: row nowrap;
+
+    justify-content: flex-start;
+    align-items: center;
+    /* align-content: flex-end;  */
+
+    height: 500px;
+    background: var(--primary);
+    margin: 100px 0;
+}
+.flex-item {
+    height: 100px;
+    width: 300px;
+    background: red;
+    border: 3px solid green;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 33.33%; /*heigth, width*/
+}
+.flex-item:nth-child(2) {
+    /* flex-grow: 3; */
+    flex-shrink: 2;
+    align-self: stretch;
+}
+
+
+
+
+
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container > * {
+    height: 100px;
+
+}
+.header {
+    background: tomato;
+    flex-basis: 100%;
+}
+.aside {
+    flex-basis: 20%;
+    background: var(--primary);
+}
+.aside:nth-child(3) {
+    order: 1;
+}
+.main {
+    flex-basis: 60%;
+}
+.footer {
+    flex-basis: 100%;
+    order: 3;
+    background: green;
+}
+.flex-2 {
+    display: flex;
+    background: blue;
+    margin: 100px 0;
+    flex-flow: column;
+    height: 400px;
+    align-items: center;
+}
+.item {
+    height: 100px;
+    width: 100px;
+    border: 1px solid tomato;
+    background: var(--primary);
+}
+
+@media (max-width: 700px) {
+    :root {
+        --primary: pink;
+    }
+}
