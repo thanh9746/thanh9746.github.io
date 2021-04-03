@@ -1,289 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>YEBO</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-  </head>
+<!doctype html>
+<html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>How to use Instascan an HTML5 QR scanner</title>
+	<link rel="shortcut icon" href="https://learncodeweb.com/demo/favicon.ico">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-6724419004010752",
+		enable_page_level_ads: true
+	  });
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131906273-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-131906273-1');
+	</script>
+</head>
 
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <!-- 3 cái dưới là để cho cái nút khi ở chế độ điện thoại -->
-        <label for="collapse" class="btn__collapse">
-          <i class="fas fa-bars"></i>
-        </label>
-        <input
-          type="checkbox"
-          id="collapse"
-          style="display: none;"
-          class="inp__collapse"
-        />
-        <div class="nav__bg"></div>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#!" class="nav__link">About us</a>
-            <!-- IN HOA, IN ĐẬM-->
-          </li>
-          <li class="nav__item"><a href="#!" class="nav__link">Work</a></li>
-          <li class="nav__item">
-            <a href="#!" class="nav__link">
-              <img src="images/yebo-logo.png" alt="logo" class="nav__logo" />
-            </a>
-          </li>
-          <li class="nav__item"><a href="#!" class="nav__link">Shop</a></li>
-          <li class="nav__item"><a href="#!" class="nav__link">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="feature">
-      <div class="feature__header">
-        <!-- ĐẶT TÊN CLASS LÀ IMG-TOP HAY HEADING ĐỂ NHẰM MỤC ĐÍCH DÙNG LẠI -->
-        <img src="images/icon1.png" alt="icon" class="feature__img-top" />
-        <h2 class="feature__heading">A NEW GENERATION OF VINTAGE BIKE</h2>
-        <p class="feature__header-desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          similique hic praesentium aspernatur quo nulla reiciendis minima
-          excepturi. Impedit sunt laboriosam alias quibusdam aperiam vitae
-          exercitationem ipsam fuga temporibus debitis!
-        </p>
-      </div>
-      <ul class="feature__list">
-        <li class="feature__item">
-          <div class="feature__item-img">
-            <img src="./images/img14.jpg" alt="bg" class="img__bg" />
-            <img
-              src="./images/img-bicycle-company.png"
-              alt="brand"
-              class="img__brand"
-            />
-          </div>
-          <div class="feature__item-content">
-            <div class="feature__item-content-top">
-              <img src="./images/icon2.png" alt="" class="feature__img-top" />
-              <h3 class="feature__heading">Vintage Oliva</h3>
-              <p class="feature__item-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-                nesciunt facilis error, sunt asperiores amet hic aspernatur eius
-                pariatur sequi assumenda vero laudantium labore quo quas.
-                Mollitia ipsa cumque repellendus.
-              </p>
-            </div>
-            <div class="feature__item-content-bottom">
-              <img src="./images/img1.jpg" alt="bg" class="img__bg" />
-            </div>
-          </div>
-        </li>
-
-        <li class="feature__item">
-          <div class="feature__item-img">
-            <img src="./images/img3.jpg" alt="bg" class="img__bg" />
-            <img
-              src="./images/img-vintage.png"
-              alt="brand"
-              class="img__brand"
-            />
-          </div>
-          <div class="feature__item-content">
-            <div class="feature__item-content-top">
-              <img src="./images/icon3.png" alt="" class="feature__img-top" />
-              <h3 class="feature__heading">La Boriosa</h3>
-              <p class="feature__item-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-                nesciunt facilis error, sunt asperiores amet hic aspernatur eius
-                pariatur sequi assumenda vero laudantium labore quo quas.
-                Mollitia ipsa cumque repellendus.
-              </p>
-            </div>
-            <div class="feature__item-content-bottom">
-              <img src="./images/img5.jpg" alt="bg" class="img__bg" />
-            </div>
-          </div>
-        </li>
-
-        <li class="feature__item">
-          <div class="feature__item-img">
-            <img src="./images/img7.jpg" alt="bg" class="img__bg" />
-            <img
-              src="./images/img-bicycle-text.png"
-              alt="brand"
-              class="img__brand"
-            />
-          </div>
-          <div class="feature__item-content">
-            <div class="feature__item-content-top">
-              <img src="./images/icon4.png" alt="" class="feature__img-top" />
-              <h3 class="feature__heading">Retro Bike</h3>
-              <p class="feature__item-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-                nesciunt facilis error, sunt asperiores amet hic aspernatur eius
-                pariatur sequi assumenda vero laudantium labore quo quas.
-                Mollitia ipsa cumque repellendus.
-              </p>
-            </div>
-            <div class="feature__item-content-bottom">
-              <img src="./images/img9.jpg" alt="bg" class="img__bg" />
-            </div>
-          </div>
-          <div class="feature__item-img">
-            <img src="./images/img8.jpg" alt="bg" class="img__bg" />
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="tweet">
-      <i class="fab fa-twitter tweet__icon"></i>
-      <h2 class="tweet__heading">
-        <span class="tweet__location">AOD New York</span>
-        <span class="tweet__author">@aod</span>
-        <time class="tweet__time">35 min</time>
-      </h2>
-      <p class="tweet__content">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum incidunt
-        dolor provident quae id placeat fugit dolorum repellat corrupti quas
-        saepe possimus, culpa nostrum iusto corporis, commodi rerum, officiis
-        ratione?
-      </p>
-      <ul class="tweet__pagi">
-        <li class="tweet__pagi-item is-active"></li>
-        <li class="tweet__pagi-item"></li>
-        <li class="tweet__pagi-item"></li>
-      </ul>
-    </div>
-
-    <ul class="images">
-      <li class="images__block">
-        <div class="images__block-item">
-          <div class="images__item">
-            <img src="./images/img10.jpg" alt="img" class="images__item-bg" />
-            <div class="images__item-brand">
-              <img src="./images/img-bicycle-sm.png" alt="" />
-              <h3 class="images__item-text">Shop now</h3>
-            </div>
-          </div>
-          <div class="images__item">
-            <img src="./images/img11.jpg" alt="img" class="images__item-bg" />
-            <div class="images__item-brand">
-              <img src="./images/img-bicycle-sm.png" alt="" />
-              <h3 class="images__item-text">Shop now</h3>
-            </div>
-          </div>
-        </div>
-        <div class="images__block-item">
-          <div class="images__item">
-            <img src="./images/img12.jpg" alt="img" class="images__item-bg" />
-            <div class="images__item-brand">
-              <img src="./images/img-bicycle-sm.png" alt="" />
-              <h3 class="images__item-text">Shop now</h3>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="images__block">
-        <div class="images__item">
-          <img src="images/img13.jpg" alt="" class="images__item-bg" />
-          <div class="images__item-brand">
-            <img src="images/img-bicycle-sm.png" alt="" />
-            <h3 class="images__item-text">Shop now</h3>
-          </div>
-        </div>
-        <div class="images__item">
-          <img src="images/img0.jpg" alt="" class="images__item-bg" />
-          <div class="images__item-brand">
-            <img src="images/img-bicycle-sm.png" alt="" />
-            <h3 class="images__item-text">Shop now</h3>
-          </div>
-        </div>
-      </li>
-      <li class="images__block">
-        <div class="images__block-item">
-          <div class="images__item">
-            <img src="images/img2.jpg" alt="" class="images__item-bg" />
-            <div class="images__item-brand">
-              <img src="images/img-bicycle-sm.png" alt="" />
-              <h3 class="images__item-text">Shop now</h3>
-            </div>
-          </div>
-          <div class="images__item">
-            <img src="images/img4.jpg" alt="" class="images__item-bg" />
-            <div class="images__item-brand">
-              <img src="images/img-bicycle-sm.png" alt="" />
-              <h3 class="images__item-text">Shop now</h3>
-            </div>
-          </div>
-        </div>
-        <div class="images__block-item">
-          <div class="images__item">
-            <img src="images/img6.jpg" alt="" class="images__item-bg" />
-            <div class="images__item-brand">
-              <img src="images/img-bicycle-sm.png" alt="" />
-              <h3 class="images__item-text">Shop now</h3>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-
-    <div class="discover">
-      <a class="discover__btn" href="javascript:void(0)"> Discover the shop</a>
-    </div>
-
-    <div class="mail">
-      <img src="./images/yebo-logo.png" alt="logo" class="mail__logo" />
-      <span class="mail__text">Stay on saddle!</span>
-      <form action="javascript:void(0)" class="mail__form">
-        <input
-          type="email"
-          name="email"
-          class="mail__form-inp"
-          placeholder="enter your email..."
-        />
-        <input type="submit" value="GO" class="mail__form-btn" />
-      </form>
-    </div>
-
-    <div class="about">
-      <div class="about__info">
-        <p class="about__text">
-          <span class="about__info-location">AOD New York</span><br />
-          2250 Lexington Avenue <br />
-          New York, NY 10035 - info@domain.com
-        </p>
-      </div>
-      <div class="about__contact">
-        <a href="https://facebook.com" class="about__contact-item"
-          ><i class="fab fa-twitter about__icon icon__twitter"></i
-        ></a>
-        <a href="https://facebook.com" class="about__contact-item"
-          ><i class="fab fa-facebook-f about__icon icon__fb"></i
-        ></a>
-        <a href="https://facebook.com" class="about__contact-item"
-          ><i class="fab fa-pinterest about__icon icon__pinterest"></i
-        ></a>
-      </div>
-      <div class="about__brand">
-        <span class="about__text">Handcrafted by</span>
-        <img
-          src="./images/yebo-logo-sm.png"
-          alt="logo"
-          class="about__brand-logo"
-        />
-      </div>
-    </div>
-  </body>
+<body>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<div class="bg-light border-bottom shadow-sm sticky-top">
+		<div class="container">
+			<header class="blog-header py-1">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand text-muted p-0 m-0" href="https://learncodeweb.com"><img src='https://learncodeweb.com/wp-content/uploads/2019/01/logo.png' alt='LearnCodeWeb'></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17" class="active nav-item"><a title="Home" href="https://learncodeweb.com/" class="nav-link">Home</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16" class="nav-item"><a title="Web Development" href="https://learncodeweb.com/learn/web-development/" class="nav-link">Web Development</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-558" class="nav-item"><a title="PHP" href="https://learncodeweb.com/learn/php/" class="nav-link">PHP</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-14" class="nav-item"><a title="Bootstrap" href="https://learncodeweb.com/learn/bootstrap-framework/" class="nav-link">Bootstrap</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-559" class="nav-item"><a title="WordPress" href="https://learncodeweb.com/learn/wordpress/" class="nav-link">WordPress</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15" class="nav-item"><a title="Snippets" href="https://learncodeweb.com/learn/snippets/" class="nav-link">Snippets</a></li>
+						</ul>
+						<form method="get" action="https://learncodeweb.com" class="form-inline my-2 my-lg-0">
+							<div class="input-group input-group-md">
+								<input type="text" class="form-control search-width" name="s" id="search" value="" placeholder="Search..." aria-label="Search">
+								<div class="input-group-append">
+									<button type="submit" class="btn btn-primary" id="searchBtn"><i class="fa fa-search"></i></button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</nav>
+			</header>
+		</div> <!--/.container-->
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- demo left sidebar -->
+				<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-6724419004010752"
+					 data-ad-slot="7706376079"
+					 data-ad-format="auto"
+					 data-full-width-responsive="true"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			
+			<div class="col">
+				<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+				<h1><a href="https://learncodeweb.com/phonegap/how-to-use-instascan-an-html5-qr-scanner/">How to use Instascan an HTML5 QR scanner</a></h1>
+				<div class="col-sm-12">
+					<video id="preview" class="p-1 border" style="width:100%;"></video>
+				</div>
+				<script type="text/javascript">
+					var scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false });
+					scanner.addListener('scan',function(content){
+						alert(content);
+						//window.location.href=content;
+					});
+					Instascan.Camera.getCameras().then(function (cameras){
+						if(cameras.length>0){
+							scanner.start(cameras[0]);
+							$('[name="options"]').on('change',function(){
+								if($(this).val()==1){
+									if(cameras[0]!=""){
+										scanner.start(cameras[0]);
+									}else{
+										alert('No Front camera found!');
+									}
+								}else if($(this).val()==2){
+									if(cameras[1]!=""){
+										scanner.start(cameras[1]);
+									}else{
+										alert('No Back camera found!');
+									}
+								}
+							});
+						}else{
+							console.error('No cameras found.');
+							alert('No cameras found.');
+						}
+					}).catch(function(e){
+						console.error(e);
+						alert(e);
+					});
+				</script>
+				<div class="btn-group btn-group-toggle mb-5" data-toggle="buttons">
+				  <label class="btn btn-primary active">
+					<input type="radio" name="options" value="1" autocomplete="off" checked> Front Camera
+				  </label>
+				  <label class="btn btn-secondary">
+					<input type="radio" name="options" value="2" autocomplete="off"> Back Camera
+				  </label>
+				</div>
+			</div>
+			
+			
+			<div class="col-sm-3">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- demo left sidebar -->
+				<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-6724419004010752"
+					 data-ad-slot="7706376079"
+					 data-ad-format="auto"
+					 data-full-width-responsive="true"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		
+		</div>
+	</div>
+	
+</body>
 </html>
